@@ -21,13 +21,13 @@ public class Main {
 
             switch (number) {
                 case 1:
-                    karticnoPlacanje();
+                    nacinPlacanja(new Gotovina());
                     break;
                 case 2:
-                    gotovinskoPlacanje();
+                    nacinPlacanja(new KreditnaKartica());
                     break;
                 case 3:
-                    payPalPlacanje();
+                    nacinPlacanja(new PayPal());
                     break;
                 default:
                     System.out.println("Pogresan unos pokusaj ponovo");
@@ -39,33 +39,11 @@ public class Main {
 
     }
 
-    public static void karticnoPlacanje() {
-        Placanje kreditnaKartica = new KreditnaKartica();
-        System.out.println("Unesite iznos uplate :");
+    public static void nacinPlacanja(Placanje placanje) {
+        System.out.println("Unesite iznos uplate:");
         double iznos = scanner.nextDouble();
-        kreditnaKartica.platiti(iznos);
-        System.out.println(kreditnaKartica.getDetalje());
-        System.out.println(kreditnaKartica.vratiIznos());
-
+        placanje.platiti(iznos);
+        System.out.println(placanje.getDetalje());
     }
 
-    public static void gotovinskoPlacanje() {
-        Placanje gotovina = new Gotovina();
-        System.out.println("Unesite iznos uplate :");
-        double iznos = scanner.nextDouble();
-        gotovina.platiti(iznos);
-        System.out.println(gotovina.getDetalje());
-        System.out.println(gotovina.vratiIznos());
-
-    }
-
-    public static void payPalPlacanje() {
-        Placanje payPal = new PayPal();
-        System.out.println("Unesite iznos uplate :");
-        double iznos = scanner.nextDouble();
-        payPal.platiti(iznos);
-        System.out.println(payPal.getDetalje());
-        System.out.println(payPal.vratiIznos());
-
-    }
 }
