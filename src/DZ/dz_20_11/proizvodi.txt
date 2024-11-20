@@ -1,0 +1,12 @@
+Popis proizvoda:
+================
+Proizvod : naziv='fsafda', cijena=333.0, kolicina=34
+-----------------
+Proizvod : naziv='fdasfdsa', cijena=434.0, kolicina=3
+-----------------
+Proizvod : naziv='fdsafds', cijena=2.0, kolicina=2
+-----------------
+Proizvod : naziv='fdasfds', cijena=1.0, kolicina=1
+-----------------
+Proizvod : naziv='fdsafds', cijena=5.0, kolicina=5
+-----------------

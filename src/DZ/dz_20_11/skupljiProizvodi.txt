@@ -1,0 +1,6 @@
+Popis skupljih proizvoda od 50 :
+===============================
+Proizvod : naziv='fsafda', cijena=333.0, kolicina=34
+-----------------
+Proizvod : naziv='fdasfdsa', cijena=434.0, kolicina=3
+-----------------
