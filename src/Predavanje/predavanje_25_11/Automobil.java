@@ -9,7 +9,7 @@ public class Automobil extends Vozilo {
     public Automobil(String marka, String model, String registracija, int brojSjedala, String vrstaGoriva) {
         super(marka, model, registracija);
         this.brojSjedala = brojSjedala;
-        setVrstaGoriva(vrstaGoriva);
+        this.vrstaGoriva = vrstaGoriva;
     }
 
     @Override
@@ -31,14 +31,5 @@ public class Automobil extends Vozilo {
     public String getVrstaGoriva() {
         return vrstaGoriva;
     }
-
-    public void setVrstaGoriva(String vrstaGoriva) {
-
-        if (!vrstaGoriva.equals("dizel") && !vrstaGoriva.equals("benzin")) {
-            throw new RuntimeException("vrsta goriva nije dizel ili benzin");
-        }
-
-        this.vrstaGoriva = vrstaGoriva;
-    }
-
+    
 }
