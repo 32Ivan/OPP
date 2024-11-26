@@ -1,0 +1,2 @@
+Informacije o clanovima:
+Osoba ime='dsffsd', prezime='fsdfsd', clanskiBroj=  383743
