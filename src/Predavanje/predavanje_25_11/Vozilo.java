@@ -1,24 +1,13 @@
 package Predavanje.predavanje_25_11;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Vozilo {
 
 
-    private static final List<String> registracije = new ArrayList<>();
     private String marka;
     private String model;
     private String registracija;
 
     public Vozilo(String marka, String model, String registracija) {
-
-        if (registracije.contains(registracija)) {
-            throw new RuntimeException("Vec postoji registracija " + registracija);
-        }
-
-        registracije.add(registracija);
-
         this.marka = marka;
         this.model = model;
         this.registracija = registracija;

@@ -27,14 +27,25 @@ public class Main {
             switch (number) {
                 case 1:
                     Kamion noviKamion = dodajNoviKamionUListuVozila();
-                    vozniPark.add(noviKamion);
+                    boolean provjeraKamiona = provjeraJedinstvenostiRegisrtracije(vozniPark, noviKamion);
+                    if (provjeraKamiona) {
+                        System.out.println("Vozilo sa registracijom " + noviKamion.getRegistracija() + " vec postoji u listi stoga nece biti dodano");
+                    } else {
+                        vozniPark.add(noviKamion);
+                    }
                     break;
                 case 2:
                     Automobil noviAutomobil = dodajNoviAutomobilUListuVozila();
-                    vozniPark.add(noviAutomobil);
+                    boolean provjeraAutomobila = provjeraJedinstvenostiRegisrtracije(vozniPark, noviAutomobil);
+                    if (provjeraAutomobila) {
+                        System.out.println("Vozilo sa registracijom " + noviAutomobil.getRegistracija() + " vec postoji u listi stoga nece biti dodano");
+                    } else {
+                        vozniPark.add(noviAutomobil);
+                    }
                     break;
                 case 3:
                     System.out.println(pretrazivanjeVozilaPoRegistraciji(vozniPark));
+
                     break;
                 case 4:
                     ispisSvihVozila(vozniPark);
@@ -95,7 +106,7 @@ public class Main {
         System.out.print("Nosivost : ");
         double nosivost = scanner.nextDouble();
 
-        System.out.print("Prikolica: ");
+        System.out.print("Prikolica (true ili false): ");
         boolean prikolica = scanner.hasNextBoolean();
 
 
@@ -129,5 +140,15 @@ public class Main {
         }
 
         return new Automobil(marka, model, registracija, brojSjedala, vrstaGoriva);
+    }
+
+    public static boolean provjeraJedinstvenostiRegisrtracije(List<Vozilo> listist, Vozilo novoVozilo) {
+        boolean postojanjeVozilaUListi = false;
+        for (Vozilo vozila : listist) {
+            if (vozila.getRegistracija().equals(novoVozilo.getRegistracija())) {
+                postojanjeVozilaUListi = true;
+            }
+        }
+        return postojanjeVozilaUListi;
     }
 }
