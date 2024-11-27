@@ -1,0 +1,6 @@
+Motocikl tipMotora='benzinski' Vozilo{registracijskiBroj='ho22', marka='honda', godina=2021
+Motocikl tipMotora='benzinski' Vozilo{registracijskiBroj='ap33', marka='aprilia', godina=2002
+Motocikl tipMotora='benzinski' Vozilo{registracijskiBroj='ya55', marka='yamaha', godina=2012
+Automobil brojVrata= 5 Vozilo{registracijskiBroj='vw21', marka='vw', godina=22
+Automobil brojVrata= 5 Vozilo{registracijskiBroj='op31', marka='opel', godina=22
+Automobil brojVrata= 5 Vozilo{registracijskiBroj='ma42', marka='mazda', godina=22
